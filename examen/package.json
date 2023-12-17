@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "examen",
   "version": "0.0.0",
   "description": "examen",
@@ -9,6 +10,12 @@
   "devDependencies": {
     "eslint": "^8.21.0"
   },
-  "eslintConfig": {
+  "eslintConfig": {},
+  "dependencies": {
+    "express": "4.18.2",
+    "ejs": "3.1.9",
+    "bluebird": "^3.7.2",
+    "mysql2": "^3.6.5",
+    "node": "^21.2.0"
   }
 }

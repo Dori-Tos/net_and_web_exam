@@ -1,0 +1,3 @@
+C:\Private\Folders\Ecam\3BE\Network and Web techs\net_and_web_exam\examen\obj\Debug\examen.njsproj.AssemblyReference.cache
+C:\Private\Folders\Ecam\3BE\Network and Web techs\net_and_web_exam\examen\obj\Debug\examen.njsproj.CoreCompileInputs.cache
+C:\Private\Folders\Ecam\3BE\Network and Web techs\net_and_web_exam\examen\bin\Microsoft.NodejsTools.WebRole.dll
