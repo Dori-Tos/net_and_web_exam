@@ -1,0 +1,123 @@
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="/css/StyleSheet.css" />
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<h1> Televisions list </h1>
+		<h2>Wishlist</h2>
+		<table>
+			<tr>
+				<th> Brand </th>
+				<th> Size </th>
+				<th> Price </th>
+			</tr>
+			<% for(television of wishlist) { %>
+			<tr>
+				<td>
+					<%= `${television.brand}`%>
+				</td>
+				<td>
+					<%= `${television.size}`%>
+				</td>
+				<td>
+					<%= `${television.price}`%>
+				</td>
+				<td>
+					<a href="/buy/"
+						<%= television.idtelevisions %>"> Buy
+					</a>
+				</td>
+				<td>
+					<a href="/delete/"
+						<%= television.idtelevisions %>"> Delete
+					</a>
+				</td>
+			</tr>
+			<% } %>
+			<tr>
+				<th>
+					<h2>New Television</h2>
+				</th>
+			</tr>
+
+			<tr>
+				<th> New Brand </th>
+				<th> New Size </th>
+				<th> New Price </th>
+			</tr>
+			<tr>
+				<form action="/add" method="POST">
+					<td>
+						<input type="text" name="new_brand" size="10" required="" />
+					</td>
+
+					<td>
+						<input type="number" name="new_size" required="" />
+					</td>
+					<td>
+						<input type="number" name="new_price" size="10" required="" />
+					</td>
+					<td>
+						<input type="submit" value="Add" />
+					</td>
+				</form>
+
+			</tr>
+		</table>
+		<br />
+
+		<h2> Used Televisions</h2>
+		<table>
+			<tr>
+				<th> Brand </th>
+				<th> Size </th>
+				<th> Price </th>
+				<th> Bought </th>
+				<th> Working </th>
+				<th> Destruction Cause </th>
+			</tr>
+			<% for(television of televisions) { %>
+			<tr>
+				<td>
+					<%= `${television.brand}`%>
+				</td>
+				<td>
+					<%= `${television.size}`%>
+				</td>
+				<td>
+					<%= `${television.price}`%>
+				</td>
+				<td>
+					<%= `${television.bought}`%>
+				</td>
+				<td>
+					<%= `${television.working}`%>
+				</td>
+				<td>
+					<%= `${television.destruction}`%>
+				</td>
+				<td>
+					<a href="/delete/"
+						<%= television.idtelevisions %>"> Delete
+					</a>
+				</td>
+				<td>
+					<form action="/destroy/"
+						<%= television.idtelevisions %>" method="post">
+						<input type="text" name="new_destruction" size="10" required="" />
+						<input type="submit" value="Destroy" />
+					</form>
+				</td>
+			</tr>
+			<% } %>
+		</table>
+		<br />
+		<% let result = 0 ;%>
+		<% for(television of televisions) { %>
+		<%  result += television.price };%>
+		<h3>
+			Total Cost : <%- result="" %> </h3>
+	</body>
+</html>
