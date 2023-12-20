@@ -1,7 +1,7 @@
 import Model from './Model.js';
 
-export default class Television extends Model {
+export default class Translation extends Model {
 
     static table = "examen.table";
-    static primary = ["idexam"];
+    static primary = ["idtranslation"];
 }

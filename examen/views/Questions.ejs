@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="/css/StyleSheet.css" />
+	<meta charset="utf-8" />
+</head>
+<body>
+	<h1> Test yourself </h1>
+	<p>
+		<% if(validation !== validation_none) { %>
+		<%= `${validation}` %>
+		<%};%>
+	</p>
+	<p><%= `How do you say "${random_translation.word}"?`%></p>
+	<form action="/submit" method="post">
+		<p>
+			Your answer :
+			<input type="text" name="test_translation" required="" />
+			<input type="submit" value="Submit" />
+			<% if(random_translation.translation !== test_translation) { %>
+			<% validation = `Unfortunately, ${random_translation.word} is  ${random_translation.translation}` ;%>
+			<% };%>
+			<% if(random_translation.translation == test_translation) { %>
+			<% validation = `Good job !`;%>
+			<% };%>
+		</p>
+	</form>
+
+	<form action="/dictionnary" method="get">
+		<button> Go to dictionnary </button>
+	</form>
+
+</body>
+</html>

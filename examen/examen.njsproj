@@ -37,7 +37,8 @@
     <Content Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="views\listTasks.ejs" />
+    <Content Include="views\ListWords.ejs" />
+    <Content Include="views\Questions.ejs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="models\" />
